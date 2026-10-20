@@ -41,36 +41,35 @@
 
 <main>
 
-<!-- Hero -->
-<section class="yb-hero" id="hero">
+<!-- Hero：滿版地圖舞台 -->
+<section class="yb-hero2" id="hero">
+  <svg class="yb-stage" id="yb-stage" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+  <div class="yb-hud" aria-hidden="true">
+    <div class="yb-chip"><b id="yb-lit">0</b><span>點亮格數</span></div>
+    <div class="yb-chip yb-chip--l"><b>86</b><span>吻合度</span></div>
+  </div>
+  <div class="yb-hero2-copy">
+    <h1><span>選個形狀，</span><span class="b">用腳在城市</span><span>畫出來。</span></h1>
+    <p class="yb-hero2-sub">不用研究路線。一筆跑把愛心、貓耳朵、南瓜貼到你附近的街道，一鍵出發，邊跑邊畫，跑完就是一幅作品。</p>
+    <div class="yb-cta-row">
+      <a class="yb-btn yb-btn--primary" href="#download">加入封測試跑</a>
+      <a class="yb-btn yb-btn--ghost" href="#how-it-works">看怎麼玩</a>
+    </div>
+    <p class="yb-note">iOS＋Android・Apple Watch 導航・封閉測試中</p>
+  </div>
+  <div class="yb-hero2-phone"><img src="images/nav.png" alt="一筆跑導航畫面：右轉 120 m，圖案完成 62%" width="390" height="792"></div>
+</section>
+
+<!-- 簡介帶 -->
+<section class="yb-intro">
   <div class="yb-container">
-    <div class="yb-fade-in">
-      <span class="yb-badge">✦ iOS + Android ・ Apple Watch 導航</span>
-      <h1 class="yb-hero-title">選個形狀，<br>用腳在城市畫出來。</h1>
-      <p class="yb-hero-subtitle">不用研究路線，一筆跑幫你把愛心、貓耳朵、南瓜貼到附近的街道，<br>一鍵出發，邊跑邊畫，跑完就是一幅作品。</p>
-      <div class="yb-hero-definition">
-        <strong>一筆跑</strong>是一款 GPS 路線畫圖跑步 App：選形狀 → 貼到街上 → 自動排出可跑的路線 → 即時導航，並計算你跑出來的<strong>吻合度</strong>。跑過的地方會點亮六角格，慢慢把整座城市收集起來。
-      </div>
-      <ul class="yb-benefits">
-        <li><span class="yb-icon">🗺️</span><div><strong>一鍵排路線</strong><span class="t">形狀貼上街道，自動對齊</span></div></li>
-        <li><span class="yb-icon yb-icon--lime">🎯</span><div><strong>吻合度分數</strong><span class="t">跑完看你畫得有多像</span></div></li>
-        <li><span class="yb-icon yb-icon--amber">⬡</span><div><strong>點亮六角格</strong><span class="t">每跑一步都有進度</span></div></li>
-        <li><span class="yb-icon yb-icon--blue">⌚</span><div><strong>手錶震動導航</strong><span class="t">轉彎不用一直看手機</span></div></li>
-      </ul>
-      <div class="yb-cta-row">
-        <a class="yb-btn yb-btn--primary" href="#download">加入封測試跑</a>
-        <a class="yb-btn yb-btn--ghost" href="#how-it-works">看怎麼玩 ↓</a>
-      </div>
-      <p class="yb-note">封閉測試期間，功能與畫面可能持續調整。</p>
-    </div>
-    <div class="yb-hero-visual yb-fade-in--delay">
-      <div class="yb-phone-wrap">
-        <div class="yb-phone"><img src="images/card-916-hex.png" alt="一筆跑跑出愛心形狀的成果畫面，吻合度 86" width="900" height="1600"></div>
-        <div class="yb-float-card yb-float-card--1"><span class="yb-dot"></span>吻合度 <b>86</b></div>
-        <div class="yb-float-card yb-float-card--2">⬡ 點亮 <b>310</b> 格</div>
-        <div class="yb-float-card yb-float-card--3">🏃 <b>6.42</b> km</div>
-      </div>
-    </div>
+    <div class="yb-hero-definition"><strong>一筆跑</strong>是一款 GPS 路線畫圖跑步 App：選形狀 → 貼到街上 → 自動排出可跑的路線 → 即時導航，並計算你跑出來的<strong>吻合度</strong>。跑過的地方會點亮六角格，慢慢把整座城市收集起來。</div>
+    <ul class="yb-benefits">
+      <li><span class="yb-icon">🗺️</span><div><strong>一鍵排路線</strong><span class="t">形狀貼上街道，自動對齊</span></div></li>
+      <li><span class="yb-icon yb-icon--lime">🎯</span><div><strong>吻合度分數</strong><span class="t">跑完看你畫得有多像</span></div></li>
+      <li><span class="yb-icon yb-icon--amber">⬡</span><div><strong>點亮六角格</strong><span class="t">每跑一步都有進度</span></div></li>
+      <li><span class="yb-icon yb-icon--blue">⌚</span><div><strong>手錶震動導航</strong><span class="t">轉彎不用一直看手機</span></div></li>
+    </ul>
   </div>
 </section>
 
@@ -251,6 +250,20 @@
   <div class="yb-container">© 2026 一筆跑 ・ 封閉測試中，內容以 App 實際為準</div>
 </footer>
 
+<script src="js/hero.js"></script>
+<script>
+(function () {
+  var stage = document.getElementById('yb-stage'), lit = document.getElementById('yb-lit'), mode = null;
+  function build() {
+    var narrow = window.innerWidth < 860;
+    if (mode === narrow) return; mode = narrow;
+    var o = {svg: stage, hexStroke: '#171d26', onLit: function (n) { lit.textContent = n; }};
+    if (narrow) HeroArt.init(Object.assign(o, {w: 900, h: 1600, cx: 450, cy: 470, s: 17, hexR: 26}));
+    else HeroArt.init(Object.assign(o, {w: 1600, h: 900, cx: 880, cy: 450, s: 20, hexR: 26}));
+  }
+  build(); addEventListener('resize', build);
+})();
+</script>
 <script>
 (function () {
   var b = document.querySelector('.yb-burger'), n = document.getElementById('yb-nav');
