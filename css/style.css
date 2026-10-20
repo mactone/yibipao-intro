@@ -284,6 +284,13 @@ body {
 .yb-cta-section .yb-btn--ghost { background: transparent; color: #fff; border-color: #4a5565; }
 .yb-cta-section .yb-btn--ghost:hover { color: var(--yb-lime); border-color: var(--yb-lime); }
 
+/* 下載 QR（只在桌機顯示；手機直接點上方按鈕） */
+.yb-qr-row { display: flex; justify-content: center; gap: 28px; margin-top: 36px; }
+.yb-qr-item { text-align: center; }
+.yb-qr-item img { width: 132px; height: 132px; padding: 8px; background: #fff; border-radius: 14px; image-rendering: pixelated; }
+.yb-qr-item figcaption { margin-top: 10px; font-size: 13px; line-height: 1.5; color: #c3cbd6; }
+@media (max-width: 767px) { .yb-qr-row { display: none; } }
+
 /* 版本紀錄 */
 .yb-changelog { max-width: 760px; margin: 36px auto 0; background: #fff; border: 1px solid var(--yb-border); border-radius: 18px; padding: 24px 28px; }
 .yb-changelog .date { display: inline-block; font-size: 12px; font-weight: 700; color: var(--yb-primary-dark); background: var(--yb-primary-alpha); border-radius: 12px; padding: 3px 12px; margin-bottom: 14px; }
