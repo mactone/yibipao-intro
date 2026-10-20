@@ -281,6 +281,7 @@ html { scroll-behavior: smooth; }
 .yb-cta-title em { font-style: normal; color: var(--yb-lime); }
 .yb-cta-section p { color: #9ba5b3; margin: 12px auto 28px; max-width: 540px; }
 .yb-cta-section .yb-cta-row { justify-content: center; }
+.yb-cta-section .yb-cta-hint { font-size: 13px; margin: 14px auto 0; }
 .yb-cta-section .yb-btn--ghost { background: transparent; color: #fff; border-color: #4a5565; }
 .yb-cta-section .yb-btn--ghost:hover { color: var(--yb-lime); border-color: var(--yb-lime); }
 
