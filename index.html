@@ -7,7 +7,12 @@
 <meta name="description" content="選一個形狀，貼到你附近的街道，一筆跑出來。一筆跑會排好路線、即時導航、算出吻合度，跑完把成果做成分享卡。">
 <meta property="og:title" content="一筆跑 - 用跑步在城市畫一幅畫">
 <meta property="og:description" content="選一個形狀，貼到你附近的街道，一筆跑出來。">
-<meta property="og:image" content="images/card-916-hex.png">
+<link rel="canonical" href="https://mactone.github.io/yibipao-intro/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mactone.github.io/yibipao-intro/">
+<meta property="og:image" content="https://mactone.github.io/yibipao-intro/images/card-916-hex.png">
+<meta property="og:image:alt" content="一筆跑跑出愛心形狀的成果畫面">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +26,7 @@
 <header class="yb-navbar">
   <div class="yb-container">
     <a class="yb-logo" href="#hero"><img src="images/logo.png" alt="一筆跑 App 圖示">一筆跑</a>
-    <nav class="yb-nav-links">
+    <nav class="yb-nav-links" id="yb-nav">
       <a href="#ways">三種玩法</a>
       <a href="#features">功能特色</a>
       <a href="#for-who">適合誰</a>
@@ -30,6 +35,7 @@
       <a href="#faq">常見問題</a>
       <a class="yb-nav-btn" href="#download">加入試跑</a>
     </nav>
+    <button class="yb-burger" type="button" aria-label="開啟選單" aria-expanded="false" aria-controls="yb-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -88,7 +94,7 @@
     <h2 class="yb-section-title">為什麼選擇一筆跑？</h2>
     <p class="yb-section-sub">把「跑步很累」變成「我今天要畫什麼」。</p>
     <div class="yb-features">
-      <div class="yb-card"><span class="yb-icon">🎨</span><h3>形狀圖庫</h3><p>愛心、貓耳朵、一隻魚、南瓜、蝙蝠……持續增加，還有節慶限定圖案。</p></div>
+      <div class="yb-card"><span class="yb-icon">🎨</span><h3>形狀圖庫</h3><p>愛心、貓耳朵、一隻魚、南瓜、蝙蝠……圖庫會持續增加。</p></div>
       <div class="yb-card"><span class="yb-icon yb-icon--lime">📍</span><h3>貼到街上</h3><p>選好形狀後，縮放、移動到你想畫的地方，自動貼合附近可跑的道路。</p></div>
       <div class="yb-card"><span class="yb-icon yb-icon--blue">🧭</span><h3>即時導航</h3><p>前方路段最醒目，轉彎預告清楚；偏離路線會提示，並協助回到原路線。</p></div>
       <div class="yb-card"><span class="yb-icon yb-icon--amber">⬡</span><h3>城市點亮</h3><p>跑過的地方會點亮六角格，累積格數、蒐集城門、橋洞、斑馬線等貼紙。</p></div>
@@ -135,9 +141,9 @@
         <h3>跑完，<br>做成一張想分享的卡。</h3>
         <p>地圖、距離、配速、吻合度，一次排好。支援 9:16 限時動態與 1:1 貼文，也能選擇要不要顯示底圖、天氣、頭像與心率。</p>
         <ul class="yb-checks">
-          <li>起點與終點可自動隱藏 200 m，保護住家位置</li>
+          <li>起點與終點可隱藏 200 m，保護住家位置</li>
           <li>雙指縮放、拖移，自己決定構圖</li>
-          <li>一鍵分享到 IG、LINE、Threads 等</li>
+          <li>按「分享這張」就能送出</li>
         </ul>
       </div>
       <div class="yb-shot"><div class="yb-phone"><img src="images/editor.png" alt="分享卡編輯畫面：9:16 限時動態與 1:1 貼文" loading="lazy" width="900" height="1947"></div></div>
@@ -190,17 +196,17 @@
 <section class="yb-section" id="compare">
   <div class="yb-container">
     <span class="yb-kicker">COMPARE</span>
-    <h2 class="yb-section-title">和一般跑步 App 差在哪？</h2>
+    <h2 class="yb-section-title">和自己規劃 GPS 圖，差在哪？</h2>
     <div class="yb-table-wrap">
       <table class="yb-table">
-        <thead><tr><th></th><th class="me">一筆跑</th><th>一般跑步 App</th><th>自己規劃 GPS 圖</th></tr></thead>
+        <thead><tr><th></th><th class="me">一筆跑</th><th>自己規劃 GPS 圖</th></tr></thead>
         <tbody>
-          <tr><td>有圖案目標</td><td class="me">✓ 選圖就有</td><td>—</td><td>✓ 要自己畫</td></tr>
-          <tr><td>自動排出可跑路線</td><td class="me">✓</td><td>—</td><td>✗ 手動對路</td></tr>
-          <tr><td>跑完吻合度分數</td><td class="me">✓</td><td>—</td><td>✗</td></tr>
-          <tr><td>每次跑都有進度（點亮格子）</td><td class="me">✓</td><td>部分有</td><td>✗</td></tr>
-          <tr><td>排版好的分享卡</td><td class="me">✓</td><td>部分有</td><td>✗ 自己截圖</td></tr>
-          <tr><td>起終點隱私保護</td><td class="me">✓ 可隱藏</td><td>視設定</td><td>✗</td></tr>
+          <tr><td>有圖案目標</td><td class="me">✓ 選圖就有</td><td>✓ 要自己畫</td></tr>
+          <tr><td>自動排出可跑路線</td><td class="me">✓</td><td>✗ 手動對路</td></tr>
+          <tr><td>跑完吻合度分數</td><td class="me">✓</td><td>✗</td></tr>
+          <tr><td>每次跑都有進度（點亮格子）</td><td class="me">✓</td><td>✗</td></tr>
+          <tr><td>排版好的分享卡</td><td class="me">✓</td><td>✗ 自己截圖</td></tr>
+          <tr><td>起終點隱私保護</td><td class="me">✓ 可隱藏</td><td>✗</td></tr>
         </tbody>
       </table>
     </div>
@@ -216,7 +222,7 @@
       <details><summary>一定要跑完整個圖案嗎？</summary><p>不用。你可以先選短一點的形狀，也可以隨時改成自由跑。不管跑哪一種，走過的地方都會點亮六角格。</p></details>
       <details><summary>圖案會跑歪嗎？吻合度怎麼算？</summary><p>街道是現實的，所以一定會有些偏差。一筆跑會拿你實際跑的軌跡和原本的形狀比對，給出吻合度分數，讓你知道自己畫得有多像。</p></details>
       <details><summary>一定要有運動手錶嗎？</summary><p>不用，手機就能完整導航與記錄。有 Apple Watch 的話，可以用震動提示轉彎，減少拿出手機的次數。</p></details>
-      <details><summary>分享出去會洩漏我家在哪嗎？</summary><p>分享卡可以自動隱藏起點與終點 200 m；分享路線連結時也能隱藏起點。公開頁面不會顯示你的帳號識別資料。</p></details>
+      <details><summary>分享出去會洩漏我家在哪嗎？</summary><p>分享卡可以隱藏起點與終點 200 m；分享路線連結時也能隱藏起點。對方打開連結會看到路線與你的暱稱，不會看到你的其他資料。</p></details>
       <details><summary>支援 iOS 和 Android 嗎？</summary><p>都有。目前處於封閉測試階段，iOS 走 TestFlight、Android 走 Google Play，功能與畫面可能持續調整。</p></details>
       <details><summary>要怎麼加入測試？</summary><p>iOS 請點下方按鈕透過 TestFlight 加入；Android 請到 Google Play 頁面加入。</p></details>
     </div>
@@ -235,28 +241,21 @@
   </div>
 </section>
 
-<!-- 版本紀錄 -->
-<section class="yb-section yb-section--gray" id="changelog">
-  <div class="yb-container">
-    <span class="yb-kicker">CHANGELOG</span>
-    <h2 class="yb-section-title">最近更新</h2>
-    <div class="yb-changelog">
-      <span class="date">封測 build 91 ・ 2026-10-16</span>
-      <ul>
-        <li>新增動效：路線預覽的光軌、結算頁的成就跳出與光掃，跑完更有成就感</li>
-        <li>新增空狀態插圖：沒有紀錄、離線、尚未授權等情境都有專屬畫面與說明</li>
-        <li>清單載入改為錯開進場與骨架畫面，等待時更順</li>
-        <li>支援系統「縮減動態效果」，開啟後動畫自動變成靜態或淡入</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="yb-footer">
   <div class="yb-container">© 2026 一筆跑 ・ 封閉測試中，內容以 App 實際為準</div>
 </footer>
 
+<script>
+(function () {
+  var b = document.querySelector('.yb-burger'), n = document.getElementById('yb-nav');
+  if (!b || !n) return;
+  function set(o) { n.classList.toggle('open', o); b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? '關閉選單' : '開啟選單'); }
+  b.addEventListener('click', function () { set(!n.classList.contains('open')); });
+  n.addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
+</script>
 </body>
 </html>
